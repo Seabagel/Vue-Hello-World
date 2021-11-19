@@ -11,13 +11,20 @@
     <h1>Hellow World</h1>
     <div id="app">
       <div v-if="show">
+        <!-- Attribute Binding -->
+        <!-- <a v-bind:href="someVar"></a> -->
+        <!-- :href="someVar"></a> -->
+
+        <!-- Item iteration -->
         <ul>
           <li v-for="item in messages">
-            <h3>{{ item.message }} - <strong>{{ item.author }}</strong></h3>
+            <h3>{{ item.message }}</h3>
+            <p>{{ item.author }}</p>
           </li>
         </ul>
       </div>
 
+      <!-- Event methods -->
       <button @click="changeMessage('This is a certified hood classic')">
         Click Me
       </button>
