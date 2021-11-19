@@ -10,7 +10,21 @@
   <body>
     <h1>Hellow World</h1>
     <div id="app">
-      <h2>I'm a template</h2>
+      <div v-if="show">
+        <ul>
+          <li v-for="item in messages">
+            <h3>{{ item.message }} - <strong>{{ item.author }}</strong></h3>
+          </li>
+        </ul>
+      </div>
+
+      <button @click="changeMessage('This is a certified hood classic')">
+        Click Me
+      </button>
+
+      <button v-if="message != 'I have diahrrea'" @click="toggleShow()">
+        Toggle Things
+      </button>
     </div>
     <script src="app.js"></script>
   </body>
